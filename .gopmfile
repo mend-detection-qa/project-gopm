@@ -1,0 +1,14 @@
+; .gopmfile — gopm (gpmgo/gopm) configuration file
+; This file is in INI format. Sections control different aspects of gopm.
+;
+; Run `gopm get` to fetch all dependencies listed in [deps].
+; Run `gopm build` to build the project using the fetched dependencies.
+
+[target]
+; The import path of this package (GOPATH-style).
+path = github.com/example/myapp
+
+[deps]
+; Each entry is:  <import-path> = @<tag>  (or =<commit-sha>, or =branch:<name>)
+; @<tag> pins the dependency to a specific version tag.
+github.com/fatih/color = @v1.7.0
